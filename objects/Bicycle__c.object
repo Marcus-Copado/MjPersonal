@@ -187,6 +187,11 @@
                     <default>false</default>
                     <label>Tandem</label>
                 </value>
+                <value>
+                    <fullName>Mountain</fullName>
+                    <default>false</default>
+                    <label>Mountain</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -196,6 +201,39 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Bicycles</pluralLabel>
+    <recordTypes>
+        <fullName>In_Store</fullName>
+        <active>true</active>
+        <label>In-Store</label>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>BMX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mountain</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Online</fullName>
+        <active>true</active>
+        <description>For online purchases</description>
+        <label>Online</label>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Road</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tandem</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts />
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
