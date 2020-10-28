@@ -153,6 +153,17 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <description>Enter your name here</description>
+        <externalId>false</externalId>
+        <label>First Name</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>MJ Test</label>
     <nameField>
         <label>MJ Test Name</label>
