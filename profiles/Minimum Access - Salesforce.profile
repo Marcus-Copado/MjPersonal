@@ -144,6 +144,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>AccountOperations_MJ</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CallIterable</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -9838,6 +9842,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Field_Mapping__c-Field Mapping Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MJ_Test__c-MJ Test Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>copado__User_Story__c-User Story Layout %28Unmanaged%29</layout>
