@@ -49,12 +49,28 @@
         <name>copado__Work_Manager_Relations</name>
     </fieldSets>
     <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
         <label><!-- Datetime Completed --></label>
         <name>Datetime_Completed__c</name>
     </fields>
     <fields>
         <label><!-- Datetime Deployed To Production --></label>
         <name>Datetime_Deployed_To_Production__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Logs --></label>
+        <name>Enable_Logs__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- JIRA key --></label>
+        <name>JIRA_key__c</name>
     </fields>
     <fields>
         <label><!-- Lead Time (Hours) --></label>

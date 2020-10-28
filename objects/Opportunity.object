@@ -207,6 +207,19 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>Oppty_Ext_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>ExternalId for Copado ADD</description>
+        <externalId>true</externalId>
+        <label>Oppty Ext Id</label>
+        <length>18</length>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>OwnerId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
