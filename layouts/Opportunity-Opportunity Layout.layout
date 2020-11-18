@@ -23,6 +23,10 @@
                 <behavior>Edit</behavior>
                 <field>Type</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>QCA__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -42,12 +46,14 @@
                 <field>Amount</field>
             </layoutItems>
             <layoutItems>
+
                 <behavior>Edit</behavior>
                 <field>Pricebook2Id</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>IsPrivate</field>
+
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
