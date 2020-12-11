@@ -46,12 +46,14 @@
                 <field>Amount</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>ExpectedRevenue</field>
+
+                <behavior>Edit</behavior>
+                <field>Pricebook2Id</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>ForecastCategoryName</field>
+                <behavior>Edit</behavior>
+                <field>IsPrivate</field>
+
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
