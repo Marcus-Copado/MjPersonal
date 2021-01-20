@@ -176,31 +176,12 @@
         <fullName>Car__c</fullName>
         <externalId>false</externalId>
         <label>Car</label>
+        <length>255</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Nissan</fullName>
-                    <default>false</default>
-                    <label>Nissan</label>
-                </value>
-                <value>
-                    <fullName>Toyota</fullName>
-                    <default>false</default>
-                    <label>Toyota</label>
-                </value>
-                <value>
-                    <fullName>Ford</fullName>
-                    <default>false</default>
-                    <label>Ford</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>CloseDate</fullName>
