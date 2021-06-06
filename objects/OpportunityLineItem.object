@@ -124,8 +124,21 @@
         <fullName>ListPrice</fullName>
     </fields>
     <fields>
+        <fullName>Name</fullName>
+    </fields>
+    <fields>
         <fullName>OpportunityId</fullName>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Oppty_Prod_Ext_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Oppty Prod  Ext Id</label>
+        <length>18</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>true</unique>
     </fields>
     <fields>
         <fullName>Product2Id</fullName>

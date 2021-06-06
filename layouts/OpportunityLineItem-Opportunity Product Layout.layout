@@ -8,6 +8,10 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Required</behavior>
+                <field>Oppty_Prod_Ext_Id__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
                 <field>OpportunityId</field>
             </layoutItems>
             <layoutItems>
@@ -84,7 +88,11 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+    <miniLayout>
+        <fields>Oppty_Prod_Ext_Id__c</fields>
+    </miniLayout>
     <multilineLayoutFields>Product2Id</multilineLayoutFields>
+    <multilineLayoutFields>Oppty_Prod_Ext_Id__c</multilineLayoutFields>
     <multilineLayoutFields>Quantity</multilineLayoutFields>
     <multilineLayoutFields>UnitPrice</multilineLayoutFields>
     <multilineLayoutFields>ServiceDate</multilineLayoutFields>

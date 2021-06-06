@@ -678,7 +678,7 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The credential to the Destination Environment that should be used when creating a deployment. This may be auto-populated, if left blank, based on the project&apos;s deployment flow if you are the owner of an Org Credential to the Destination Environment.</inlineHelpText>
-        <label>Destination Org Credential</label>
+        <label>Destination Credential</label>
         <lookupFilter>
             <active>true</active>
             <filterItems>
@@ -689,7 +689,7 @@
             <isOptional>false</isOptional>
         </lookupFilter>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>Promotions (Destination Org Credential)</relationshipLabel>
+        <relationshipLabel>Promotions (Destination Credential)</relationshipLabel>
         <relationshipName>Promotions2</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -789,7 +789,7 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The credential to the Source Environment that should be used when creating a deployment. This may be auto-populated, if left blank, based on the project&apos;s deployment flow if you are the owner of an Org Credential to the Source Environment.</inlineHelpText>
-        <label>Source Org Credential</label>
+        <label>Source Credential</label>
         <lookupFilter>
             <active>true</active>
             <filterItems>
@@ -800,7 +800,7 @@
             <isOptional>false</isOptional>
         </lookupFilter>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>Promotions (Source Org Credential)</relationshipLabel>
+        <relationshipLabel>Promotions (Source Credential)</relationshipLabel>
         <relationshipName>Promotions1</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>

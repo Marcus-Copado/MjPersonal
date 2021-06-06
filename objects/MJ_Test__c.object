@@ -171,7 +171,7 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>MJ Tests</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

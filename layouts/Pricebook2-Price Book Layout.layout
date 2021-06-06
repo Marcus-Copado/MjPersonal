@@ -8,6 +8,10 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Required</behavior>
+                <field>Price_Book_Ext_Id__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
@@ -42,6 +46,9 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+    <miniLayout>
+        <fields>Price_Book_Ext_Id__c</fields>
+    </miniLayout>
     <relatedLists>
         <relatedList>RelatedPricebookEntryListForPricebook</relatedList>
     </relatedLists>
