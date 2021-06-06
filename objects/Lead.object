@@ -285,6 +285,18 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>External_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>An external ID for seeding test data</description>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <length>18</length>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>Fax</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -384,11 +396,10 @@
         <fullName>AllOpenLeads</fullName>
         <columns>FULL_NAME</columns>
         <columns>LEAD.COMPANY</columns>
-        <columns>LEAD.STATE</columns>
+        <columns>External_ID__c</columns>
         <columns>LEAD.PHONE</columns>
         <columns>LEAD.EMAIL</columns>
         <columns>LEAD.STATUS</columns>
-        <columns>CORE.USERS.ALIAS</columns>
         <columns>LEAD.CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <filters>

@@ -243,6 +243,30 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>copado__Deployment_Automation_Override__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Select an Automation Template to override the default Deployment Behaviour defined in the Pipeline</inlineHelpText>
+        <label>Deployment Automation Override</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Only automation templates are allowed</errorMessage>
+            <filterItems>
+                <field>copado__Deployment__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Automation Template</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>copado__Deployment__c</referenceTo>
+        <relationshipLabel>Environments (Deployment Automation Override)</relationshipLabel>
+        <relationshipName>DeploymentAutomationEnvironments</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>copado__Index_Back_Promotion_metadata__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
@@ -260,6 +284,15 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>copado__Last_Refresh_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Refresh Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>copado__Latest_Deployment_Status__c</fullName>
@@ -380,6 +413,31 @@
         <unique>true</unique>
     </fields>
     <fields>
+        <fullName>copado__Platform__c</fullName>
+        <defaultValue>&quot;Salesforce&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Platform</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Salesforce</fullName>
+                    <default>true</default>
+                    <label>Salesforce</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>copado__Promotion_Default_Credential__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -404,6 +462,30 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>copado__Promotion_Override__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Select an Automation Template to override the default Promotion Behaviour defined in the Pipeline</inlineHelpText>
+        <label>Promotion Automation Override</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Only automation templates are allowed</errorMessage>
+            <filterItems>
+                <field>copado__Deployment__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Automation Template</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>copado__Deployment__c</referenceTo>
+        <relationshipLabel>Environments (Promotion Automation Override)</relationshipLabel>
+        <relationshipName>PromotionAutomationsEnvironments</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>copado__Run_all_tests__c</fullName>
@@ -508,6 +590,17 @@
         <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__Unique_Template_for_promote_and_deploy</fullName>
+        <active>true</active>
+        <description>An environment cannot have the same automation template for both Promote and Deploy</description>
+        <errorConditionFormula>AND(
+   NOT(ISBLANK(copado__Promotion_Override__c)),
+   copado__Promotion_Override__c == copado__Deployment_Automation_Override__c
+)</errorConditionFormula>
+        <errorDisplayField>copado__Deployment_Automation_Override__c</errorDisplayField>
+        <errorMessage>An environment cannot have the same automation template for both Promote and Deploy</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Find_Replace_Rule_Editor</fullName>
