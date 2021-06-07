@@ -12056,6 +12056,9 @@
         <readable>false</readable>
     </fieldPermissions>
     <layoutAssignments>
+        <layout>Apple_Computer__c-Apple Computer Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Bicycle__c-Bicycle Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
