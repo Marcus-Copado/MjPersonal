@@ -76,7 +76,7 @@
     <decisions>
         <name>Snapshot_is_Completed</name>
         <label>Snapshot is Completed</label>
-        <locationX>331</locationX>
+        <locationX>329</locationX>
         <locationY>183</locationY>
         <defaultConnector>
             <targetReference>Wait_for_Git_Snapshot_to_Complete</targetReference>
@@ -86,10 +86,10 @@
             <name>Snapshot_completed_successfully</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Copado_Job_Status.200.status</leftValueReference>
+                <leftValueReference>Copado_Job_Status.200.isSuccess</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Completed Successfully</stringValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -102,9 +102,9 @@
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>Copado_Job_Status.200.isSuccess</leftValueReference>
-                <operator>EqualTo</operator>
+                <operator>NotEqualTo</operator>
                 <rightValue>
-                    <booleanValue>false</booleanValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -113,7 +113,7 @@
             <label>Completed with errrors</label>
         </rules>
     </decisions>
-    <description>Creates a metadata snapshot of your target environment. Version 6</description>
+    <description>Creates a metadata snapshot of your target environment. Version 8</description>
     <formulas>
         <name>ResumeTime</name>
         <dataType>DateTime</dataType>
@@ -220,8 +220,8 @@
     <recordUpdates>
         <name>Update_Result_Record</name>
         <label>Update Result Record</label>
-        <locationX>1235</locationX>
-        <locationY>68</locationY>
+        <locationX>1234</locationX>
+        <locationY>69</locationY>
         <connector>
             <targetReference>Snapshot_Executed</targetReference>
         </connector>
@@ -293,7 +293,7 @@
             <targetReference>Git_Snapshot</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>copadoApiKey</name>
         <dataType>String</dataType>
