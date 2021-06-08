@@ -28,7 +28,7 @@
     <actionCalls>
         <name>Git_Snapshot</name>
         <label>Git Snapshot</label>
-        <locationX>915</locationX>
+        <locationX>914</locationX>
         <locationY>68</locationY>
         <actionName>CopadoAPI.executeSnapshot</actionName>
         <actionType>externalService</actionType>
@@ -102,9 +102,9 @@
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>Copado_Job_Status.200.isSuccess</leftValueReference>
-                <operator>NotEqualTo</operator>
+                <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -113,7 +113,7 @@
             <label>Completed with errrors</label>
         </rules>
     </decisions>
-    <description>Creates a metadata snapshot of your target environment. Version 8</description>
+    <description>Creates a metadata snapshot of your target environment. Version 9</description>
     <formulas>
         <name>ResumeTime</name>
         <dataType>DateTime</dataType>
@@ -221,7 +221,7 @@
         <name>Update_Result_Record</name>
         <label>Update Result Record</label>
         <locationX>1234</locationX>
-        <locationY>69</locationY>
+        <locationY>68</locationY>
         <connector>
             <targetReference>Snapshot_Executed</targetReference>
         </connector>
