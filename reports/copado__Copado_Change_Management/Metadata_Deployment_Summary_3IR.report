@@ -25,9 +25,6 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
-        <field>CUST_NAME</field>
-    </columns>
-    <columns>
         <field>copado__User_Story__c.copado__Environment__c</field>
     </columns>
     <columns>
@@ -54,8 +51,16 @@
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>copado__User_Story_Metadata__c.copado__Metadata_API_Name__c</field>
+        <field>CUST_NAME</field>
         <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <aggregateType>RowCount</aggregateType>
+        <dateGranularity>Day</dateGranularity>
+        <field>copado__User_Story_Metadata__c.copado__Metadata_API_Name__c</field>
+        <sortByName>RowCount</sortByName>
+        <sortOrder>Asc</sortOrder>
+        <sortType>Aggregate</sortType>
     </groupingsDown>
     <name>Metadata Deployment Summary</name>
     <params>

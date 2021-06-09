@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>CopadoWebhookAPIV2</label>
+    <namedCredential>Copado_API</namedCredential>
+    <schema>{
+  &quot;swagger&quot;: &quot;2.0&quot;,
+  &quot;info&quot;: {
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;title&quot;: &quot;Copado Webhooks&quot;,
+    &quot;description&quot;: &quot;This is a Postman collection of all Copado Webhooks API v1. All query params and passed ids need to set as Postman global variables.&quot;,
+    &quot;contact&quot;: {}
+  },
+  &quot;host&quot;: &quot;app-api.copado.com&quot;,
+  &quot;basePath&quot;: &quot;/json/v1/webhook&quot;,
+  &quot;schemes&quot;: [
+    &quot;https&quot;
+  ],
+  &quot;consumes&quot;: [
+    &quot;application/json&quot;
+  ],
+  &quot;produces&quot;: [
+    &quot;application/json&quot;
+  ],
+  &quot;paths&quot;: {
+    &quot;/orgDiff/{org_difference_id}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Calculate and deploy an Org Difference (POST)&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;CalculateanddeployanOrgDifference(POST)&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;deploy&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;org_difference_id&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/deploy/{deployment_id}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Execute a Deployment (POST)&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;ExecuteaDeployment(POST)&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;deployment_id&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/snapshotDiff/{org_difference_id}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Calculate Snapshot Differences (POST)&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;CalculateSnapshotDifferences(POST)&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;org_difference_id&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/metadata/org_id&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Refresh Org’s metadata cache (POST)&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;RefreshOrg’smetadatacache(POST)&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/testOrg/{org_id}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Run all Org’s Apex Test (POST)&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;RunallOrg’sApexTest(POST)&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;org_id&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/gitSnapshot/{snapshot_id}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Take a Git Snapshot (POST)&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;TakeaGitSnapshot(POST)&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;apply_env_vars&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;apply_find_replace&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;snapshot_id&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/retrieveCommits/{snapshot_id}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Retrieve Commits (POST)&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;RetrieveCommits(POST)&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;snapshot_id&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/branchStatuses/{flowId}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Recalculate Deployment Flow Branch Statuses (POST)&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;RecalculateDeploymentFlowBranchStatuses(POST)&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;flowId&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/selenium/TestRun/{selenium_test_run_id}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Run Selenium Tests (POST)&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;RunSeleniumTests(POST)&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;selenium_test_run_id&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/githook/event/pullrequest/provider/provider/version/{version}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Pull Request Event&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;PullRequestEvent&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;version&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/scanCompliance&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Scan Compliance on Org Credential (POST)&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;ScanComplianceonOrgCredential(POST)&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;orgId&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/analyseStaticCode/{orgId}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Org Static Code Analysis&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;OrgStaticCodeAnalysis&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;settingsId&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;analysisTool&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;orgId&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/commitFiles/{user_story_id}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Commit Files on User Story&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;CommitFilesonUserStory&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;commitMessage&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;user_story_id&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/promotions/{promotionId}/process&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Deploy a Promotion&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;DeployaPromotion&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;checkOnly&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;testLevel&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;deploymentName&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;promotionId&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/deleteGitBranches/{repositoryId}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Delete a list of git branches&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;Deletealistofgitbranches&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;repositoryId&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/repository/{repositoryId}/branch&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Create git branches&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;Creategitbranches&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;repositoryId&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    },
+    &quot;/resumeDeployment/{jobId}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Resume deployment&quot;,
+        &quot;tags&quot;: [
+          &quot;Misc&quot;
+        ],
+        &quot;operationId&quot;: &quot;Resumedeployment&quot;,
+        &quot;deprecated&quot;: false,
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;deploymentId&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;success&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          },
+          {
+            &quot;name&quot;: &quot;jobId&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;headers&quot;: {}
+          }
+        }
+      }
+    }
+  },
+  &quot;tags&quot;: [
+    {
+      &quot;name&quot;: &quot;Misc&quot;,
+      &quot;description&quot;: &quot;&quot;
+    }
+  ]
+}</schema>
+    <schemaType>OpenApi</schemaType>
+    <status>Complete</status>
+</ExternalServiceRegistration>
